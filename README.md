@@ -1,51 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple E-commerce</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Cart</a></li>
-            </ul>
-        </nav>
-    </header>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
-    <main>
-        <section class="product-list">
-            <div class="product-item">
-                <img src="https://via.placeholder.com/200" alt="Product 1">
-                <h3>Product 1</h3>
-                <p>$20.00</p>
-                <button class="add-to-cart" data-product="Product 1" data-price="20.00">Add to Cart</button>
-            </div>
-            <div class="product-item">
-                <img src="https://via.placeholder.com/200" alt="Product 2">
-                <h3>Product 2</h3>
-                <p>$25.00</p>
-                <button class="add-to-cart" data-product="Product 2" data-price="25.00">Add to Cart</button>
-            </div>
-            <!-- More products -->
-        </section>
+header {
+    background-color: #333;
+    padding: 10px;
+}
 
-        <section id="cart">
-            <h2>Your Cart</h2>
-            <ul id="cart-list"></ul>
-            <p>Total: $<span id="total-price">0.00</span></p>
-            <button id="checkout-btn">Proceed to Checkout</button>
-        </section>
-    </main>
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-    <footer>
-        <p>&copy; 2025 Simple E-commerce</p>
-    </footer>
+nav a {
+    color: white;
+    text-decoration: none;
+}
 
-    <script src="app.js"></script>
-</body>
-</html>
+.product-list {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.product-item {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+}
+
+.product-item img {
+    width: 100%;
+}
+
+button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#cart {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+#cart-list {
+    list-style: none;
+    padding: 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
